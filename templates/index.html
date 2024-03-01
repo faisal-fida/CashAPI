@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Form</title>
+  </head>
+  <body>
+    <h2>Payment Form</h2>
+    <form action="/" method="POST">
+      <label for="pay_method">Payment Method:</label>
+      <select name="pay_method">
+        <option value="cm">Cash-Maal</option>
+        <option value="pm">Another Payment Method</option>
+      </select>
+
+      <br />
+
+      <label for="amount">Amount:</label>
+      <select name="amount">
+        <option value="100">100</option>
+        <option value="200">200</option>
+      </select>
+
+      <br />
+
+      <label for="currency">Currency:</label>
+      <select name="currency">
+        <option value="PKR">PKR</option>
+        <option value="USD">USD</option>
+      </select>
+
+      <input
+        type="hidden"
+        name="success_url"
+        value="https://google.com"
+        required
+      />
+
+      <input
+        type="hidden"
+        name="cancel_url"
+        value="https://facebook.com"
+        required
+      />
+
+      <input
+        type="hidden"
+        name="client_email"
+        value="admin@gmail.com"
+        required
+      />
+
+      <input type="hidden" name="web_id" value="1" required />
+
+      <input type="hidden" name="order_id" value="1" required />
+
+      <input
+        type="hidden"
+        name="addi_info"
+        value="Payment for order 1"
+        required
+      />
+
+      <br />
+      <br />
+
+      <input type="submit" name="Submit" value="Pay With Cash-Maal" />
+    </form>
+  </body>
+</html>
